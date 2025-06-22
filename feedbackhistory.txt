@@ -1,0 +1,26 @@
+==========================================FEEDBACK HISTORY===================================
+
+--- FEEDBACK ENTRY ---
+Food: 5
+Service: 5
+Experience: 5
+------------------------
+
+--- FEEDBACK ENTRY ---
+Food: 5
+Service: 5
+Experience: 4
+Other Comments: good service
+------------------------
+
+--- FEEDBACK ENTRY ---
+Food: 5
+Service: 4
+Experience: 3
+------------------------
+
+--- FEEDBACK ENTRY ---
+Food: 5
+Service: 5
+Experience: 5
+------------------------
