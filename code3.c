@@ -11,27 +11,30 @@ struct feedback {
 
 // Function declarations
 void menu ();
+void takingOrder(int quantity[13]);
 void bill (int quantity[13],char allfood[][30],int allprice[13]);
 void feedbackRating(struct feedback *f); 
-void takingOrder(int quantity[13]);
 
 int main() {
-int n=0;
-int h=0;
+
 struct feedback f;
 int  quantity[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};  
-char allfood[13][30]={ "Idli", "Dosa", "Pongal", "Chapati","Paneer Rice", "Mushroom Fried Rice", "Fried Rice", "Pulao", "Curd Rice", "Ice Cream", "Milkshake", "Tea", "Coffee"};
+char allfood[13][30]={ "Idli", "Dosa", "Pongal", "Chapati",
+    "Paneer Rice", "Mushroom Fried Rice", "Fried Rice", "Pulao", "Curd Rice", 
+    "Ice Cream", "Milkshake", "Tea", "Coffee"};
 int allprice[13]={30, 40, 35, 20, 110, 100, 90, 85, 60,50, 60, 10, 15};
-     
-     do{
+int n=0;  
+do{
     printf("Taking order \n View the menu below\n");
-    menu(allfood,allprice);
+    menu();
    takingOrder(quantity);
    printf("If you want anything further then press 1 or press 0 and the bill will be generated \n");
    scanf("%d",&n);
 }while(n!=0);
-   bill(quantity,allfood,allprice);
-   printf("kindly press 1 to give feedback");
+bill(quantity,allfood,allprice);
+int h=0;
+printf("kindly press 1 to give feedback");
+
    scanf("%d",&h);
    feedbackRating(&f);
     return 0;
