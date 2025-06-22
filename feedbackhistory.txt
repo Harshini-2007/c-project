@@ -31,3 +31,10 @@ Service: 4
 Experience: 4
 Other Comments: satisfied with food and service
 ------------------------
+
+--- FEEDBACK ENTRY ---
+Food: 5
+Service: 5
+Experience: 5
+Other Comments: good
+------------------------

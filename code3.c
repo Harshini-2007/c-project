@@ -16,7 +16,6 @@ void bill (int quantity[13],char allfood[][30],int allprice[13]);
 void feedbackRating(struct feedback *f); 
 
 int main() {
-
 struct feedback f;
 int  quantity[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};  
 char allfood[13][30]={ "Idli", "Dosa", "Pongal", "Chapati",
@@ -25,16 +24,15 @@ char allfood[13][30]={ "Idli", "Dosa", "Pongal", "Chapati",
 int allprice[13]={30, 40, 35, 20, 110, 100, 90, 85, 60,50, 60, 10, 15};
 int n=0;  
 do{
-    printf("Taking order \n View the menu below\n");
-    menu();
-   takingOrder(quantity);
-   printf("If you want anything further then press 1 or press 0 and the bill will be generated \n");
-   scanf("%d",&n);
+printf("Taking order \n View the menu below\n");
+menu();
+takingOrder(quantity);
+printf("If you want anything further then press 1 or press 0 and the bill will be generated \n");
+scanf("%d",&n);
 }while(n!=0);
 bill(quantity,allfood,allprice);
 int h=0;
 printf("kindly press 1 to give feedback");
-
    scanf("%d",&h);
    feedbackRating(&f);
     return 0;
@@ -60,10 +58,10 @@ fclose(fp);
 
 //taking order
 void takingOrder(int quantity[13]){ 
-   int n=0,s=0;
-  
+int n=0;
 printf("Enter total number of items to order\n");
 scanf("%d",&n);
+int s=0;
 for(int k=0;k<n;k++){
     int q=0;
      printf("Enter the serial number of item from menu\n");
@@ -74,8 +72,7 @@ for(int k=0;k<n;k++){
      else{ printf("Enter the quantity of item\n");
           scanf("%d",&q);
           quantity[s-1]+=q;
-
-     }
+}
 }
 printf("Order has been placed\n");
    } 
@@ -97,15 +94,12 @@ printf("Order has been placed\n");
 // Feedback function
 
    void feedbackRating(struct feedback *f) {
-    int o = 0;
-
     // Open file in append mode
     FILE *f1 = fopen("feedbackhistory.txt", "a");
     if (f1 == NULL) {
         printf(" ERROR: Could not open feedbackhistory.txt for writing.\n");
         return;
     }
-
     // Take feedback ratings
     printf("Rate the food on a scale of 5: ");
     scanf("%d", &f->food);
@@ -117,8 +111,8 @@ printf("Order has been placed\n");
     scanf("%d", &f->overallExperience);
 
     
-    while (getchar() != '\n');
-
+    //while (getchar() != '\n');
+   int o=0;
     // Optional comment
     printf("Do you want to give any other feedback? (1 = Yes / 0 = No): ");
     scanf("%d", &o);
