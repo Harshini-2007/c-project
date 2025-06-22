@@ -11,36 +11,18 @@ struct feedback {
 
 // Function declarations
 void menu ();
-void bill (int quantity[13],char allfood[][30],int allprice[13]){
-    int total= 0;
-    printf ("Bill\n");
-    printf("-----------\n");
-  for(int a=0;a<13;a++){
-    if(quantity[a]!=0){
-        printf("%s: %d\n",allfood[a],allprice[a]*(quantity[a]));
-        total+=allprice[a]*(quantity[a]);
-    }
-  }
-  printf("Total bill:%d\n",total);
- 
-}
-
-
- void feedbackRating(struct feedback *f); 
- void takingOrder(int quantity[13]);
-
-
+void bill (int quantity[13],char allfood[][30],int allprice[13]);
+void feedbackRating(struct feedback *f); 
+void takingOrder(int quantity[13]);
 
 int main() {
- int n=0;
-    int h=0;
-
-
-    struct feedback f;
- int  quantity[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};  
-    char allfood[13][30]={ "Idli", "Dosa", "Pongal", "Chapati","Paneer Rice", "Mushroom Fried Rice", "Fried Rice", "Pulao", "Curd Rice", "Ice Cream", "Milkshake", "Tea", "Coffee"};
-    int allprice[13]={30, 40, 35, 20, 110, 100, 90, 85, 60,50, 60, 10, 15};
-     //menu(allfood,allprice);
+int n=0;
+int h=0;
+struct feedback f;
+int  quantity[13]={0,0,0,0,0,0,0,0,0,0,0,0,0};  
+char allfood[13][30]={ "Idli", "Dosa", "Pongal", "Chapati","Paneer Rice", "Mushroom Fried Rice", "Fried Rice", "Pulao", "Curd Rice", "Ice Cream", "Milkshake", "Tea", "Coffee"};
+int allprice[13]={30, 40, 35, 20, 110, 100, 90, 85, 60,50, 60, 10, 15};
+     
      do{
     printf("Taking order \n View the menu below\n");
     menu(allfood,allprice);
@@ -52,11 +34,6 @@ int main() {
    printf("kindly press 1 to give feedback");
    scanf("%d",&h);
    feedbackRating(&f);
-
-    // space to skip newline
-
-    
-
     return 0;
 }
 
@@ -159,7 +136,7 @@ printf("Order has been placed\n");
     fprintf(f1, "Service: %d\n", f->Service);
     fprintf(f1, "Experience: %d\n", f->overallExperience);
     if (o == 1) {
-        fprintf(f1, "Other Comments: %s", f->otherFeedback); // no \n at end
+        fprintf(f1, "Other Comments: %s", f->otherFeedback); 
     }
     fprintf(f1, "------------------------\n");
 
