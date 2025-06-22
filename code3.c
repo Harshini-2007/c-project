@@ -113,7 +113,7 @@ printf("Order has been placed\n");
     // Optional comment
     printf("Do you want to give any other feedback? (1 = Yes / 0 = No): \n");
     scanf("%d", &o);
-    while (getchar() != '\n'); 
+    //while (getchar() != '\n'); 
 
     if (o == 1) {
         printf("Enter your feedback: \n");
