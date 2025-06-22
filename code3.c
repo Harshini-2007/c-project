@@ -32,7 +32,7 @@ scanf("%d",&n);
 }while(n!=0);
 bill(quantity,allfood,allprice);
 int h=0;
-printf("kindly press 1 to give feedback");
+printf("kindly press 1 to give feedback\n");
    scanf("%d",&h);
    feedbackRating(&f);
     return 0;
@@ -109,17 +109,14 @@ printf("Order has been placed\n");
 
     printf("Rate the overall experience on a scale of 5: ");
     scanf("%d", &f->overallExperience);
-
-    
-    //while (getchar() != '\n');
    int o=0;
     // Optional comment
-    printf("Do you want to give any other feedback? (1 = Yes / 0 = No): ");
+    printf("Do you want to give any other feedback? (1 = Yes / 0 = No): \n");
     scanf("%d", &o);
     while (getchar() != '\n'); 
 
     if (o == 1) {
-        printf("Enter your feedback: ");
+        printf("Enter your feedback: \n");
         char user[100];
 
         fgets(user, sizeof(user), stdin);
