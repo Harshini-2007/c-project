@@ -27,7 +27,7 @@ do{
 printf("Taking order \n View the menu below\n");
 menu();
 takingOrder(quantity);
-printf("If you want anything further then press 1 or press 0 and the bill will be generated \n");
+printf("If you want anything further then press 1 or press 0 and the bill will be generated\n");
 scanf("%d",&n);
 }while(n!=0);
 bill(quantity,allfood,allprice);
@@ -113,7 +113,7 @@ printf("Order has been placed\n");
     // Optional comment
     printf("Do you want to give any other feedback? (1 = Yes / 0 = No): \n");
     scanf("%d", &o);
-    //while (getchar() != '\n'); 
+    while (getchar() != '\n'); 
 
     if (o == 1) {
         printf("Enter your feedback: \n");

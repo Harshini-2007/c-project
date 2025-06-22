@@ -38,3 +38,10 @@ Service: 5
 Experience: 5
 Other Comments: good
 ------------------------
+
+--- FEEDBACK ENTRY ---
+Food: 5
+Service: 5
+Experience: 5
+Other Comments: 
+------------------------
